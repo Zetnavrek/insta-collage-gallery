@@ -1,0 +1,38 @@
+body{
+    background-color: lightgray;
+}
+
+.title {
+    color: rgb(53, 53, 53);
+    
+}
+
+.column {
+    column-count: 3;
+    column-gap: 1em;
+    width:80%;
+    margin: 3px auto;
+    max-height: auto;
+}
+.select {
+    height:40vh;
+    cursor:move;
+}
+
+#container-collage {
+    box-sizing: border-box;
+}
+
+.images {
+    width:100% !important;
+    height: 100% !important;
+}
+
+*.io  {
+    margin:0 !important;
+    padding:0 !important;
+    text-align: center !important;
+    height: 30vh !important;
+}
+
+
