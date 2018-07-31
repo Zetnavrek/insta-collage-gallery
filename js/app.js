@@ -21,6 +21,7 @@ function drop(event) {
     let dropped = event.dataTransfer.getData('text');
     if(event.currentTarget.childNodes.length <= 0) {
     event.target.appendChild(document.getElementById(dropped));
+
     
     } else{
         return false;
