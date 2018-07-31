@@ -14,13 +14,15 @@
     <header>
         <nav>
             <div class="nav-wrapper cyan">
-                <a href="#" class="brand-logo">Insta-Collage</a>
+                <a href="#" class="brand-logo offset-l6">Insta-Collage</a>
+                <a class="waves-effect waves-light btn" id="logout">LogOut</a>
             </div>
         </nav>
     </header>
     <section id="container-collage" ondrop="drop(event)" ondragover="allowDrop(event)" >
         <div class="container row">
             <h5 class="title">Arrastra aquí para comenzar tu collage</h5>
+            <div id="user"></div>
             <div class="card-panel col s4 l4 io" id="d1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             <div class="card-panel col s4 l4 io" id="d2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             <div class="card-panel col s4 l4 io" id="d3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -32,7 +34,6 @@
     <section id="drag">
         <nav>
             <div class="nav-wrapper cyan">
-                
                 <a href="#" class="brand-logo center"><i class="medium material-icons">add_a_photo</i>Galería</a>
             </div>
         </nav>
@@ -46,8 +47,13 @@
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <!--<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>-->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="js/firebase.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

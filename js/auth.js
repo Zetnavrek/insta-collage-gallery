@@ -1,26 +1,50 @@
 
-    document.getElementById('login').addEventListener('click', () => {
-    //console.log('click');
-        let email = document.getElementById('e-mail').value;
-        let password = document.getElementById('password').value;
-        firebase.auth().signInWithEmailAndPassword(email,password)
-        .catch ((error) => {
-            swal(error.message);
+    $(document).ready(() => {
+        $("#login").click(() => {
+            let email = $("#email").val();
+            let password = $("#password").val();
+     
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .catch((error) => {
+                    swal(error.message);
+                })
+     
         })
-    })
-
-    document.getElementById('logout').addEventListener('click', () => {
-        console.log('click');
-        firebase.auth().signOut();
-    });
-
-    firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-            window.location='index.html';
-            // User is signed in.
-        } else{
-            console.log('deslogeado');
-    }
-});
-
+        $("#logout").click(() => {
+            firebase.auth().signOut();
+            window.location = "auth.html";
+        })
+     
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                $("#user").text(user.email);
+                console.log(window.location.pathname);
+                if(window.location.pathname != "/index.html"){
+                    window.location = "index.html";
+                }
+            } else {
+                $("#user").text("");
+            }
+        })
+     
+     
+        $("#signup").click(() => {
+            let email = $("#email").val();
+            let password = $("#password").val();
+     
+            if (password == 123456) {
+                swal("Error ", " The password can not be 123456, empty field or have less than 6 characters", "error");
+                let passwordInput = $("#password").val("");
+            } else {
+                firebase.auth().createUserWithEmailAndPassword(email, password)
+                    .catch((error) => {
+                        //swal("Error", error.message, "error");
+                    })
+            }
+     
+     
+     
+        })
+     });
+    
     

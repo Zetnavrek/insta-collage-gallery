@@ -26,11 +26,4 @@ function drop(event) {
         return false;
     }
 
-    //console.log(dropped);
-    /*event.target.id.appendChild(dropped);
-    console.log(droped);*/
-    //let container = document.getElementById(dropped);
-    //let newImage = document.createElement('img');
-    //newImage.src= dropped.src;
-    
 }
