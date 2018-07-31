@@ -7,4 +7,5 @@ var config = {
     storageBucket: "",
     messagingSenderId: "722299360401"
   };
+  
   firebase.initializeApp(config);
