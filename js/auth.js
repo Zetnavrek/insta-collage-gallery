@@ -12,15 +12,15 @@
         })
         $("#logout").click(() => {
             firebase.auth().signOut();
-            window.location = "auth.html";
+            window.location = "index.html";
         })
      
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 $("#user").text(user.email);
                 console.log(window.location.pathname);
-                if(window.location.pathname != "/index.html"){
-                    window.location = "index.html";
+                if(window.location.pathname != "/gallery.html"){
+                    window.location = "gallery.html";
                 }
             } else {
                 $("#user").text("");

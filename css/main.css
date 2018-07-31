@@ -1,3 +1,7 @@
 body {
-    background-image: url("../assets/images/tulip1.jpg");
+    background-image: url("../assets/images/tulip2.jpg");
+    width: 100%;
+    background-position: bottom;
+    background-size: cover;
+    height:500px;
 }
