@@ -19,8 +19,8 @@
             if (user) {
                 $("#user").text(user.email);
                 console.log(window.location.pathname);
-                if(window.location.pathname != "/gallery.html"){
-                    window.location = "gallery.html";
+                if(!window.location.pathname.match(/gallery.html$/)){
+                    window.location = "index.html";
                 }
             } else {
                 $("#user").text("");
