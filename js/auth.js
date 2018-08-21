@@ -20,7 +20,7 @@
                 $("#user").text(user.email);
                 console.log(window.location.pathname);
                 if(!window.location.pathname.match(/gallery.html$/)){
-                    window.location = "index.html";
+                    window.location = "gallery.html";
                 }
             } else {
                 $("#user").text("");
