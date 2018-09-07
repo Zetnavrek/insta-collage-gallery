@@ -1,7 +1,12 @@
 body {
     background-image: url("../assets/images/tulip2.jpg");
     width: 100%;
-    background-position: bottom;
+    background-position:top;
     background-size: cover;
-    height:500px;
+    height:700px;
+    background-repeat: no-repeat;
+}
+
+.input-field input {
+    border-bottom-color: black;
 }
